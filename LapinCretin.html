@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+
+
+    // ADD grey gridline
+
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();                // Create a new path
+                                        // x (width) add 200 
+                                        // y (height) multiply -1 add 200 
+        // var x = 
+
+        // draw x axis
+        ctx.moveTo(-200+200,0*-1 + 300);
+        ctx.lineTo(200+200,0*-1 + 300);
+
+        // draw y axis
+        ctx.moveTo(0+200,300*-1 + 300);
+        ctx.lineTo(0+200,-300*-1 + 300);
+
+        // oreilles et haut de la tete 
+        ctx.moveTo(80+200,140*-1 + 300);  // Relier de A1 a A22
+        ctx.lineTo(72+200,170*-1 + 300);
+        ctx.lineTo(60+200,190*-1 + 300);
+        ctx.lineTo(100+200,250*-1 + 300);
+        ctx.lineTo(104+200,270*-1 + 300);
+        ctx.lineTo(100+200,280*-1 + 300);
+        ctx.lineTo(80+200,292*-1 + 300);
+        ctx.lineTo(60+200,290*-1 + 300);
+        ctx.lineTo(40+200,270*-1 + 300);
+        ctx.lineTo(30+200,210*-1 + 300);
+        ctx.lineTo(10+200,220*-1 + 300);
+        ctx.lineTo(-10+200,220*-1 + 300);
+        ctx.lineTo(-30+200,210*-1 + 300);
+        ctx.lineTo(-40+200,270*-1 + 300);
+        ctx.lineTo(-60+200,290*-1 + 300);
+        ctx.lineTo(-80+200,292*-1 + 300);
+        ctx.lineTo(-100+200,280*-1 + 300);
+        ctx.lineTo(-102+200,270*-1 + 300);
+        ctx.lineTo(-100+200,250*-1 + 300);
+        ctx.lineTo(-60+200,190*-1 + 300);
+        ctx.lineTo(-73+200,140*-1 + 300);
+        ctx.lineTo(-80+200,140*-1 + 300);
+
+
+        // oeil gauche et interieur
+        ctx.lineTo(-60+200,140*-1 + 300);  // Relier A22 et B1, puis de B1 à B7
+
+        ctx.lineTo(-50+200,130*-1 + 300);
+        ctx.lineTo(-50+200,110*-1 + 300);
+        ctx.lineTo(-60+200,100*-1 + 300);
+        ctx.lineTo(-80+200,100*-1 + 300);
+        ctx.lineTo(-90+200,110*-1 + 300);
+        ctx.lineTo(-90+200,130*-1 + 300);
+
+        ctx.moveTo(-80+200,140*-1 + 300);  // Aller à A22
+        ctx.lineTo(-90+200,130*-1 + 300);  // Relier A22 et B7
+
+        ctx.moveTo(-80+200,130*-1 + 300);  // Relier de B8 à B11 (PAS PRECISE)
+        ctx.lineTo(-60+200,130*-1 + 300);
+        ctx.lineTo(-60+200,110*-1 + 300);
+        ctx.lineTo(-80+200,110*-1 + 300);
+
+        ctx.lineTo(-80+200,130*-1 + 300);  // Relier B11 et B8
+
+        
+
+        // oeil droit et interieur
+
+        ctx.moveTo(80+200,140*-1 + 300);  // Aller à A1
+        ctx.lineTo(90+200,130*-1 + 300);  // Relier à B12, Relier de B12 à B17
+        ctx.lineTo(90+200,110*-1 + 300);
+        ctx.lineTo(80+200,100*-1 + 300);
+        ctx.lineTo(60+200,100*-1 + 300);
+        ctx.lineTo(50+200,110*-1 + 300);
+        ctx.lineTo(50+200,130*-1 + 300);
+
+        ctx.lineTo(60+200,140*-1 + 300);  // Relier a B18
+        ctx.lineTo(80+200,140*-1 + 300);  // Relier B18 a A1
+
+        ctx.moveTo(60+200,130*-1 + 300);  // Relier de B19 a B21
+        ctx.lineTo(80+200,130*-1 + 300);
+        ctx.lineTo(80+200,120*-1 + 300);
+  
+        ctx.lineTo(90+200,120*-1 + 300);  // Relier B21 a B23
+        ctx.lineTo(60+200,120*-1 + 300);  // Relier B23 a B22
+        ctx.lineTo(50+200,120*-1 + 300);  // Relier B22 a B24
+
+        ctx.moveTo(60+200,130*-1 + 300);  // Relier de B19 a B22 (PAS PRECISE)
+        ctx.lineTo(60+200,120*-1 + 300);  // (PAS PRECISE)
+
+
+        // bas du corps
+
+        ctx.moveTo(-80+200,100*-1 + 300);  // Aller à D1, Relier de D1 à D13
+        ctx.lineTo(-80+200,60*-1 + 300);
+        ctx.lineTo(-70+200,30*-1 + 300);
+        ctx.lineTo(-50+200,0*-1 + 300);
+        ctx.lineTo(-80+200,-110*-1 + 300);
+        ctx.lineTo(-70+200,-160*-1 + 300);
+        ctx.lineTo(-60+200,-180*-1 + 300);
+        ctx.lineTo(-10+200,-180*-1 + 300);
+        ctx.lineTo(0+200,-170*-1 + 300);
+        ctx.lineTo(10+200,-180*-1 + 300);
+        ctx.lineTo(50+200,-180*-1 + 300);
+        ctx.lineTo(70+200,-160*-1 + 300);
+        ctx.lineTo(80+200,-130*-1 + 300);
+        ctx.lineTo(63+200,-50*-1 + 300);
+
+        // Bouche
+
+        ctx.moveTo(-60+200,90*-1 + 300);  // Aller à C1, Relier de C1 à C16
+        ctx.lineTo(-40+200,80*-1 + 300);
+        ctx.lineTo(40+200,80*-1 + 300);
+        ctx.lineTo(60+200,90*-1 + 300);
+        ctx.lineTo(70+200,70*-1 + 300);
+        ctx.lineTo(70+200,50*-1 + 300);
+        ctx.lineTo(60+200,30*-1 + 300);
+        ctx.lineTo(50+200,20*-1 + 300);
+        ctx.lineTo(40+200,20*-1 + 300);
+        ctx.lineTo(20+200,30*-1 + 300);
+        ctx.lineTo(-20+200,30*-1 + 300);
+        ctx.lineTo(-40+200,20*-1 + 300);
+        ctx.lineTo(-50+200,20*-1 + 300);
+        ctx.lineTo(-60+200,30*-1 + 300);
+        ctx.lineTo(-70+200,50*-1 + 300);
+        ctx.lineTo(-70+200,70*-1 + 300);
+        ctx.lineTo(-60+200,90*-1 + 300);  //  Relier C16 et C1
+
+
+        // Dents
+
+        ctx.moveTo(-20+200,80*-1 + 300);  // Aller à C17, Relier de C17 à C19
+        ctx.lineTo(-20+200,60*-1 + 300);
+        ctx.lineTo(-40+200,60*-1 + 300);
+        ctx.lineTo(-40+200,80*-1 + 300);  // Relier C19 et C2
+
+        ctx.moveTo(30+200,80*-1 + 300);  // Aller à C21, Relier de C21 à C23
+        ctx.lineTo(30+200,60*-1 + 300);
+        ctx.lineTo(10+200,60*-1 + 300);
+        ctx.lineTo(10+200,80*-1 + 300); // Relier C23 à C20
+
+
+        // Bras droit
+
+        ctx.moveTo(63+200,-50*-1 + 300);  // Aller à D13, Relier de D13 à D22
+        ctx.lineTo(110+200,-62*-1 + 300);
+        ctx.lineTo(120+200,-80*-1 + 300);
+        ctx.lineTo(130+200,-80*-1 + 300);
+        ctx.lineTo(130+200,-90*-1 + 300);
+        ctx.lineTo(140+200,-90*-1 + 300);
+        ctx.lineTo(140+200,-80*-1 + 300);
+        ctx.lineTo(150+200,-70*-1 + 300);
+        ctx.lineTo(150+200,-50*-1 + 300);
+        ctx.lineTo(140+200,-40*-1 + 300);
+
+        ctx.moveTo(130+200,-40*-1 + 300); // Relier de D23 à D28
+        ctx.lineTo(110+200,-50*-1 + 300);
+        ctx.lineTo(60+200,-30*-1 + 300);
+        ctx.lineTo(50+200,0*-1 + 300);
+        ctx.lineTo(70+200,30*-1 + 300);
+        ctx.lineTo(80+200,60*-1 + 300);
+
+        ctx.lineTo(80+200,100*-1 + 300);  // Relier D28 à B14
+
+        // Ventouse
+
+        ctx.moveTo(130+200,-70*-1 + 300);   // Aller à E1, Relier de E1 à E3
+        ctx.lineTo(130+200,-60*-1 + 300);
+        ctx.lineTo(120+200,-43*-1 + 300);
+
+        ctx.lineTo(130+200,-40*-1 + 300);   // Relier E3 à D23
+        ctx.lineTo(130+200,-50*-1 + 300);   // Relier D23 à E4
+        ctx.lineTo(140+200,-50*-1 + 300);   // Relier de E4 à E13
+        ctx.lineTo(140+200,20*-1 + 300);
+        ctx.lineTo(150+200,20*-1 + 300);
+        ctx.lineTo(150+200,30*-1 + 300);
+        ctx.lineTo(160+200,40*-1 + 300);
+        ctx.lineTo(160+200,60*-1 + 300);
+        ctx.lineTo(110+200,60*-1 + 300);
+        ctx.lineTo(110+200,40*-1 + 300);        
+        ctx.lineTo(120+200,30*-1 + 300);
+
+        ctx.lineTo(150+200,30*-1 + 300);    // Relier E13 à E8
+
+        ctx.moveTo(120+200,30*-1 + 300);    // Aller à E13, Relier de E13 à E15
+        ctx.lineTo(120+200,20*-1 + 300);
+        ctx.lineTo(130+200,20*-1 + 300);
+        ctx.lineTo(140+200,20*-1 + 300);    // Relier E15 à E6
+
+        ctx.moveTo(130+200,20*-1 + 300);    // Aller à E15
+        ctx.lineTo(130+200,-80*-1 + 300);   // Relier E15 à D16
+
+        ctx.moveTo(140+200,-50*-1 + 300);   // Aller à E5
+        ctx.lineTo(150+200,-50*-1 + 300);   // Relier E5 à D21
+
+        ctx.moveTo(130+200,-70*-1 + 300);   // Aller à E1
+        ctx.lineTo(140+200,-80*-1 + 300);   // Relier E1 à D19
+
+
+        // Bras gauche
+
+        ctx.moveTo(-60+200,-30*-1 + 300);   // Aller à F1, Relier de F1 à F9
+        ctx.lineTo(-110+200,-100*-1 + 300);
+        ctx.lineTo(-130+200,-120*-1 + 300);
+        ctx.lineTo(-130+200,-140*-1 + 300);
+        ctx.lineTo(-110+200,-150*-1 + 300);
+        ctx.lineTo(-90+200,-140*-1 + 300);
+        ctx.lineTo(-90+200,-130*-1 + 300);
+        ctx.lineTo(-110+200,-130*-1 + 300);
+        ctx.lineTo(-110+200,-120*-1 + 300);
+
+        ctx.lineTo(-90+200,-130*-1 + 300);  // Relier F9 à F7
+        ctx.lineTo(-100+200,-110*-1 + 300); // Relier F7 à F10
+        ctx.lineTo(-71+200,-80*-1 + 300);   // Relier F10 à F11
+
+        // Ventre et nombril
+
+        ctx.moveTo(-60+200,-80*-1 + 300);   // Aller à G1, Relier de G1 à G8
+        ctx.lineTo(-30+200,-50*-1 + 300);
+        ctx.lineTo(30+200,-50*-1 + 300);
+        ctx.lineTo(60+200,-80*-1 + 300);
+        ctx.lineTo(60+200,-140*-1 + 300);
+        ctx.lineTo(30+200,-170*-1 + 300);
+        ctx.lineTo(-30+200,-170*-1 + 300);
+        ctx.lineTo(-60+200,-140*-1 + 300);
+        ctx.lineTo(-60+200,-80*-1 + 300);   // Relier G8 à G1 (pas mentionné)
+
+
+        ctx.moveTo(-10+200,-120*-1 + 300);   // Aller à G9, Relier de G9 à G12
+        ctx.lineTo(0+200,-120*-1 + 300);
+        ctx.lineTo(0+200,-130*-1 + 300);
+        ctx.lineTo(-10+200,-130*-1 + 300);
+        ctx.lineTo(-10+200,-120*-1 + 300);   // Relier de G12 à G9 (pas mentionné)
+
+        // Interieur de l'oreille droite
+
+        ctx.moveTo(-80+200,280*-1 + 300);   // Aller à H1, Relier de H1 à H7
+        ctx.lineTo(-60+200,270*-1 + 300);
+        ctx.lineTo(-40+200,210*-1 + 300);
+        ctx.lineTo(-40+200,200*-1 + 300);
+        ctx.lineTo(-50+200,200*-1 + 300);
+        ctx.lineTo(-90+200,250*-1 + 300);
+        ctx.lineTo(-90+200,270*-1 + 300);
+        ctx.lineTo(-80+200,280*-1 + 300);   // Relier de H7 à H1
+
+        // Interieur de l'oreille gauche
+
+        ctx.moveTo(60+200,270*-1 + 300);   // Aller à H8, Relier de H8 à H14
+        ctx.lineTo(80+200,280*-1 + 300);
+        ctx.lineTo(90+200,270*-1 + 300);
+        ctx.lineTo(90+200,250*-1 + 300);
+        ctx.lineTo(50+200,200*-1 + 300);
+        ctx.lineTo(40+200,200*-1 + 300);
+        ctx.lineTo(40+200,210*-1 + 300);
+        ctx.lineTo(60+200,270*-1 + 300);   // Relier de H14 à H8
+
+
+        ctx.stroke();
+
+      }
+    }
+  </script>
+
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="400" height="600"></canvas>
+ </body>
+</html>
